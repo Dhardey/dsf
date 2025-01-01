@@ -1,0 +1,95 @@
+---
+layout: 'base.html'
+description: 'Meta description for the page'
+metaTitle: 'Title that shows up on OG social Media Title Tag'
+tagTitle: 'Services'
+preloadImg: '/images/tiles.jpg'
+preloadCSS: '/css/reviews.css'
+permalink: 'services/'
+eleventyNavigation:
+    key: Services
+    order: 400
+---
+<!-- Enter html code below -->
+
+<!-- ============================================ -->
+<!--                    LANDING                   -->
+<!-- ============================================ -->
+
+<section id="int-hero">
+  <h1 id="home-h">Our Services</h1>
+  {% image './src/images/tiles.jpg', 'tiled floor', '', 'lazy', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
+</section>
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="sbsr-333">
+  <div class="cs-container">
+      <!-- Left Image Section -->
+      <div class="cs-image-group">
+          <picture class="cs-picture">
+            {% image './src/images/room.jpg', 'empty conference room', '', 'lazy', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
+          </picture>
+          <div class="cs-box">
+              <span class="cs-number">25+</span>
+              <span class="cs-desc">Years<br> Experience</span>
+          </div>
+      </div>
+      <!-- Right Content Section-->
+      <div class="cs-content">
+          <h2 class="cs-title">Commercial Cleaning</h2>
+          <p class="cs-text">
+            Keep your business spotless with our reliable commercial cleaning services, specializing in office and industrial cleaning, janitorial services, and customized cleaning solutions. Some of our
+            cleaning services include:
+          </p>
+          <ul class="cs-ul">
+              <li class="cs-li">Indoor Environmental Tile Scrubbing and High-Speed Burnishing</li>
+              <li class="cs-li">Carpet Extraction</li>
+              <li class="cs-li">Ceiling Cleaning</li>
+              <li class="cs-li">Strip and Wax</li>
+          </ul>
+          <a class="cs-button-solid" aria-label="learn more about our programs" href="">Learn More</a>
+      </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--                Side By Side                  -->
+<!-- ============================================ -->
+
+<section id="RTsbs-1594">
+  <div class="cs-container">
+      <div class="cs-image-group">
+          <!--Top left image-->
+          <picture class="cs-picture cs-picture1">
+            {% image './src/images/vent.jpg', 'ac vent', '', 'lazy', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
+          </picture>
+      </div>
+      <div class="cs-content">
+          <h2 class="cs-title">HVAC</h2>
+          <p class="cs-text">
+              Dive into the exhilarating world of fishing with Gill Rush, a dynamic and electrifying apparel brand designed exclusively for those who live for the rush of the catch. For avid anglers who feel the pulse quicken at the mere tug on their line, Gill Rush captures the essence of that heart-pounding moment when fish and fisherman lock in a fierce dance of skill and strategy.
+          </p>
+          <a href="" class="cs-button-solid">View All Collections</a>
+      </div>
+  </div>
+</section>
+              
+                              
+<!-- ============================================ -->
+<!--             Final Call to Action             -->
+<!-- ============================================ -->
+
+<section id="cta">
+  <div class="container">
+    <h2 class="title">Get It Done <br> With Us Today</h2>
+    <p>
+            Say something catchy, informative, and encouraging to click the button to go to the contact page.  I like to add these to the bottom of all pages.
+        </p>
+    <a href="/contact.html" class="button-solid">Free Estimate</a>
+  </div>
+  {% image './src/images/mop-main.jpg', 'kitchen cabinets', '', 'lazy', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
+
+</section>

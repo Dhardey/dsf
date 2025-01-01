@@ -3,7 +3,7 @@ layout: 'base.html'
 description: "Meta description for the page"
 metaTitle: 'Title that shows up on google searches'
 tagTitle: 'About'
-preloadImg: '/images/cabinets2-1920w.webp'
+preloadImg: '/images/tiles.jpg'
 preloadCSS: '/css/about.css'
 permalink: 'about/'
 eleventyNavigation:
@@ -19,7 +19,7 @@ eleventyNavigation:
 
 <section id="int-hero">
   <h1 id="home-h">About Us</h1>
-  {% image './src/images/cabinets2.jpg', 'cabinets', '', 'lazy', '(max-width: 850px) 850px, 1920px'%}
+  {% image './src/images/tiles.jpg', 'tiled floor', '', 'lazy', '(max-width: 850px) 850px, 1920px'%}
 </section>
 
 <!-- ============================================ -->
@@ -30,28 +30,22 @@ eleventyNavigation:
   <div class="cs-container">
     <!-- Left Image Section -->
     <div class="cs-left">
-      {% image './src/images/cabinets2.jpg', 'cabinets', 'cs-picture cs-picture1', 'lazy'%}
-      {% image './src/images/construction.jpg', 'house', 'cs-picture cs-picture2', 'lazy'%}
+      {% image './src/images/clean-machine.jpg', 'cabinets', 'cs-picture cs-picture1', 'lazy'%}
+      {% image './src/images/mop-main.jpg', 'house', 'cs-picture cs-picture2', 'lazy'%}
     </div>
     <!-- Right Content Section-->
     <div class="cs-right">
-      <span class="cs-topper">About Us</span>
-      <h2 class="cs-title">About Company Title</h2>
+      <span class="cs-topper">Our History</span>
+      <h2 class="cs-title">We're a Different Type of Service Company</h2>
       <p class="cs-text">
-                In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
+        Founded in 1999 in Aiken, South Carolina by John Wallace, DSF Enterprises has been delivering reliable, high-quality cleaning services to businesses and industrial plants throughout the CSRA for 
+        over 25 years. Today, we proudly remain a family-run business, with John’s daughter, Danita, joining the leadership team.
             </p>
       <p class="cs-text">
-                In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
+        We specialize in serving commercial buildings and industrial plants, offering expert HVAC services, reliable commercial cleaning, and comprehensive preventative maintenance. Whether you need 
+        efficient heating and cooling solutions, a spotless work environment, or proactive maintenance for your equipment, we’re here to keep your operations running smoothly.
             </p>
-      <div class="cs-flex-group">
-        <p class="cs-flex-p">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Classei consequat tincidunt turpis sit amet imperdiet for mind.
-                </p>
-        <span class="cs-name">Justin Time</span>
-        <span class="cs-job">CEO-Founder</span>
-        <img class="cs-quote-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg" alt="gavel" width="136" height="77">
-      </div>
-      <a href="" class="button-solid">More About Us</a>
+      <a href="/services" class="button-solid">View Our Services</a>
     </div>
   </div>
 </section>
@@ -62,11 +56,14 @@ eleventyNavigation:
 
 <section id="cta">
   <div class="container">
-    <h2 class="title">Get It Done <br> With Us Today</h2>
+    <h2 class="title">
+      Discover the Service You Deserve
+    </h2>
     <p>
-            Say something catchy, informative, and encouraging to click the button to go to the contact page.  I like to add these to the bottom of all pages.
-        </p>
-    <a href="/contact.html" class="button-solid">Free Estimate</a>
+      Our team is dedicated to delivering exceptional results you can see and trust. From routine cleaning to customized solutions, 
+      we’ve got you covered. Don’t wait—take the first step toward a cleaner, fresher workspace today!
+    </p>
+    <a href="/contact" class="button-solid">Get an Estimate Now</a>
   </div>
-  {% image './src/images/cabinets2.jpg', 'kitchen cabinets', '', 'lazy', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920'%}
+  {% image './src/images/mop-cta.jpg', 'mop on a tile floor', '', 'lazy', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
 </section>

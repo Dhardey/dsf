@@ -261,12 +261,12 @@
     content: '';
     position: absolute;
     display: block;
-    height: 69.25rem;
+    height: 49.25rem;
     width: 125rem;
-    background: url("/assets/svgs/cta-squares.svg");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: #ffffff;
+    background-image: radial-gradient(rgba(12, 12, 12, 0.171) 2px, transparent 0);
+    background-size: 30px 30px;
+    background-position: -5px -5px;
     opacity: 1;
     bottom: 0;
     left: 50%;
