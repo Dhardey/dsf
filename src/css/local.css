@@ -5,9 +5,16 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #sbs-371 {
-      /*padding: var(--sectionPadding);*/
+      padding: var(--sectionPadding);
       overflow: hidden;
   }
+
+  .cs-title {
+    color: red;
+    text-align: center;
+    padding-bottom: .2rem;
+  }
+
   @keyframes floatAnimation {
       0% {
           transform: translateY(0);
@@ -203,6 +210,67 @@
       bottom: 2.6875em;
       z-index: 2;
   }
+  .cs-stat-group {
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(6, 1fr);
+    margin-left: 10%;
+  }
+  .cs-stat {
+    list-style: none;
+    margin: 0;
+    /* 16px - 40px */
+    padding: clamp(1rem, 3vw, 2.5rem) 1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    grid-column: span 2;
+    /* border code */
+    /* remove the border on the far-right elements */
+    /* makes the last two items span across multiple columns. changes at desktop to one line */
+  }
+  #stat-mid:before {
+    content: "";
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(
+        0deg,
+        rgba(72, 72, 72, 0) 0%,
+        #484848 50%,
+        rgba(72, 72, 72, 0) 100%
+    );
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .cs-desc {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: center;
+    /* keeps the width of the stat description from overflowing onto the border */
+    /* 88px - 176px */
+    width: clamp(5.5rem, 20vw, 11rem);
+    margin-bottom: 0.5rem;
+    color: #858585;
+    display: block;
+  }
+  .cs-number {
+    /* 25px - 49px */
+    font-size: clamp(1.5625rem, 3vw, 3.0625rem);
+    line-height: 1.2em;
+    font-weight: 900;
+    margin: 0;
+    color: var(--headerColor);
+    display: block;
+  }
+
 }
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
@@ -220,6 +288,17 @@
       /* prevents flexbox from squishing it */
       flex: none;
   }
+
+  .cs-stat {
+    grid-column: span 1;
+}
+ .cs-stat:nth-of-type(4),
+ .cs-stat:nth-of-type(5) {
+    grid-column: span 1;
+}
+ .cs-stat:nth-of-type(3):before {
+    content: "";
+}
 }
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
@@ -244,6 +323,8 @@
       fill: var(--dark);
   }
 }
+
+
                              
 
 /*-- -------------------------- -->
