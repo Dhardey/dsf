@@ -119,11 +119,8 @@
       top: 0;
   }
   #sbs-371 .cs-blob {
-      width: 24.5em;
-      height: 31.0625em;
       position: absolute;
-      right: 0em;
-      top: 0.625em;
+      max-height: 36rem;
   }
   #sbs-371 .cs-lightning {
       width: 4em;
@@ -324,9 +321,6 @@
   }
 }
 
-
-                             
-
 /*-- -------------------------- -->
 <---    Final Call To Action    -->
 <--- -------------------------- -*/
@@ -396,7 +390,7 @@
 @media only screen and (min-width: 1300px) {
   #cta {
     position: relative;
-    margin-top: 6.25rem;
+    margin-top: 11.5rem;
   }
   #cta:before {
     display: none;
@@ -405,12 +399,12 @@
     content: '';
     position: absolute;
     display: block;
-    height: 69.25rem;
+    height: 49.25rem;
     width: 125rem;
-    background: url("/assets/svgs/cta-squares.svg");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: #ffffff;
+    background-image: radial-gradient(rgba(12, 12, 12, 0.171) 2px, transparent 0);
+    background-size: 30px 30px;
+    background-position: -5px -5px;
     opacity: 1;
     bottom: 0;
     left: 50%;

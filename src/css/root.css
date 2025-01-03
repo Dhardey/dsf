@@ -13,6 +13,8 @@
     --bodyTextColorWhite: #FAFBFC;
     --headerColor: #1a1a1a;
     --secondary: grey;
+     /* --bg-light: #fefefe;
+    --bg-grey: #e8e8e8;
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
     /* 31px - 49px */
@@ -53,8 +55,9 @@
     padding: 0;
     font-size: 100%;
     font-family: 'Roboto', Arial, sans-serif;
-    color: var(--bodyTextColor);
+    color: var(--bg-light);
     overflow-x: hidden;
+    background-color: var(--bg-light);
   }
   *,
   *:before,
