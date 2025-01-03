@@ -1,0 +1,389 @@
+/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #services-m {
+      padding: var(--sectionPadding);
+  }
+  #services-m .cs-container {
+      width: 100%;
+      /* changes to 1280px at desktop */
+      max-width: 34.375rem;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* 48px - 64px */
+      gap: clamp(3rem, 6vw, 4rem);
+  }
+  #services-m .cs-content {
+      /* set text align to left if content needs to be left aligned */
+      text-align: left;
+      width: 100%;
+      max-width: 32.625rem;
+      display: flex;
+      flex-direction: column;
+      /* centers content horizontally, set to flex-start to left align */
+      align-items: flex-start;
+  }
+
+  #services-m .cs-text {
+      margin-bottom: 1rem;
+  }
+  #services-m .cs-text:last-of-type {
+      margin-bottom: 2rem;
+  }
+  #services-m .cs-ul {
+      width: 100%;
+      margin: 0 0 2rem 0;
+      padding-left: 1.25rem;
+      /* prevents padding and border from affecting height and width */
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+  }
+  #services-m .cs-li {
+      font-size: var(--bodyFontSize);
+      line-height: 1.5em;
+      list-style: none;
+      text-align: left;
+      width: 100%;
+      max-width: 25rem;
+      margin: 0;
+      color: var(--bodyTextColor);
+      position: relative;
+  }
+  #services-m .cs-li:before {
+      /* bullet */
+      content: "";
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: currentColor;
+      opacity: 1;
+      position: absolute;
+      display: block;
+      top: 0.625rem;
+      left: -0.9375rem;
+  }
+  #services-m .cs-button-solid {
+      font-size: 1rem;
+      /* 46px - 56px */
+      line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+      text-decoration: none;
+      font-weight: 700;
+      text-align: center;
+      margin: 0;
+      color: #fff;
+      min-width: 9.375rem;
+      padding: 0 1.5rem;
+      background-color: var(--primary);
+      border-radius: 0.25rem;
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+      /* prevents padding from adding to the width */
+      box-sizing: border-box;
+  }
+  #services-m .cs-button-solid:before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 0%;
+      background: #000;
+      opacity: 1;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      border-radius: 0.25rem;
+      transition: width 0.3s;
+  }
+  #services-m .cs-button-solid:hover:before {
+      width: 100%;
+  }
+  #services-m .cs-image-group {
+      /* scaling entire section down. font-size starts at a min in vw, and stops when that value reaches 1em (16px). Since we want the picture elements to base their font size on the parent and not the root, we use ems for this entire section  */
+      font-size: min(2.08vw, 0.791em);
+      width: 42.875em;
+      height: 41.125em;
+      position: relative;
+      /* flips it horizontally */
+      transform: scaleX(-1);
+  }
+  @keyframes floatAnimation {
+      0% {
+          transform: translateY(0);
+      }
+      50% {
+          transform: translateY(-3em);
+      }
+      100% {
+          transform: translateY(0);
+      }
+  }
+  @keyframes floatAnimation2 {
+      0% {
+          transform: translateY(0);
+      }
+      50% {
+          transform: translateY(-2em);
+      }
+      100% {
+          transform: translateY(0);
+      }
+  }
+  #services-m .cs-image-group:before {
+      /* blue circle */
+      content: "";
+      width: 7.5em;
+      height: 7.5em;
+      border-radius: 50%;
+      background: var(--secondary);
+      opacity: 1;
+      position: absolute;
+      display: block;
+      bottom: 6.25em;
+      left: 0em;
+      z-index: 10;
+      animation-name: floatAnimation;
+      animation-duration: 6s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
+  }
+  #services-m .cs-image-group:after {
+      /* white circle */
+      content: "";
+      width: 9.375em;
+      height: 9.375em;
+      border-radius: 50%;
+      background: var(--primaryLight);
+      opacity: 1;
+      position: absolute;
+      display: block;
+      top: 0em;
+      right: 6.25em;
+      z-index: -1;
+      animation-name: floatAnimation2;
+      animation-duration: 4s;
+      animation-delay: 0.2s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
+  }
+  #services-m .cs-picture {
+      width: 39.375em;
+      height: 39.375em;
+      border-radius: 50%;
+      border: clamp(6px, 1.2vw, 12px) solid #f7f7f7;
+      /* clips the img tag corners */
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+  }
+  #services-m .cs-picture img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      /* flips image to original orientation, undoing the flip on the parent container */
+      transform: scaleX(-1);
+  }
+  #services-m .cs-box {
+      width: 15.8125em;
+      height: 15.8125em;
+      border-radius: 50%;
+      border: clamp(6px, 1.2vw, 12px) solid #f7f7f7;
+      background-color: var(--primaryLight);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 0.25rem;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      /* flips image to original orientation, undoing the flip on the parent container */
+      transform: scaleX(-1);
+  }
+  #services-m .cs-number {
+      /* 40px - 61px */
+      font-size: clamp(2.5rem, 5vw, 3.8125rem);
+      line-height: 1.2em;
+      font-weight: bold;
+      text-align: center;
+      color: var(--bodyTextColorWhite);
+  }
+  #services-m .cs-desc {
+      /* 14px - 25px */
+      font-size: clamp(0.875rem, 2.2vw, 1.5625rem);
+      line-height: 1.2em;
+      text-align: center;
+      max-width: 7.8125rem;
+      color: var(--bodyTextColorWhite);
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #services-m .cs-container {
+      max-width: 80rem;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+  }
+  #services-m .cs-content {
+      width: 50%;
+  }
+  #services-m .cs-image-group {
+      /* reset the scale */
+      font-size: min(1.2vw, 1em);
+      /* sends it to the right in the 2nd position */
+      order: 2;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #services-m .cs-topper {
+      color: var(--primaryLight);
+  }
+  body.dark-mode #services-m .cs-title,
+  body.dark-mode #services-m .cs-text,
+  body.dark-mode #services-m .cs-li {
+      color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #services-m .cs-picture,
+  body.dark-mode #services-m .cs-box {
+      border-color: var(--accent);
+  }
+}
+
+                              
+
+                                                               
+                                                                                                        
+/*-- -------------------------- -->
+<---    Final Call To Action    -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0em) {
+  #cta {
+    position: relative;
+    padding: 3.125rem 0;
+  }
+  #cta:before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    opacity: .7;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #cta .container {
+    text-align: center;
+  }
+  #cta picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+  }
+  #cta picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  #cta .title {
+    font-weight: 900;
+    font-size: min(9vw, 3rem);
+    line-height: 1.20833333;
+    color: #fff;
+    position: relative;
+    margin-bottom: 2.25rem;
+    text-align: center;
+  }
+  #cta p {
+    color: #fff;
+    text-align: center;
+    opacity: 1;
+    margin: auto;
+    margin-bottom: 2.25rem;
+    width: 96%;
+    max-width: 37.375rem;
+  }
+}
+/* Small Desktop */
+@media only screen and (min-width: 64em) {
+  #cta {
+    padding: 10.5rem 0;
+  }
+}
+/* Large Desktop */
+@media only screen and (min-width: 1300px) {
+  #cta {
+    position: relative;
+    margin-top: 6.25rem;
+  }
+  #cta:before {
+    display: none;
+  }
+  #cta:after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 49.25rem;
+    width: 125rem;
+    background-color: #ffffff;
+    background-image: radial-gradient(rgba(12, 12, 12, 0.171) 2px, transparent 0);
+    background-size: 30px 30px;
+    background-position: -5px -5px;
+    opacity: 1;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -3;
+  }
+  #cta .container {
+    width: 90.0625%;
+    margin: auto;
+  }
+  #cta picture {
+    width: 90.0625%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #cta picture:before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    opacity: .7;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0em) {
+  body.dark-mode #cta:after {
+    display: none;
+  }
+}

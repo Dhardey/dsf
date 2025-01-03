@@ -34,7 +34,7 @@ eleventyNavigation:
 <!--             About                            -->
 <!-- ============================================ -->
 
-<section id="sbs-371">
+<section id="about-index">
   <div class="cs-container">
       <div class="cs-content">
           <h2 class="cs-title">We're a Different Kind of Service Company</h2>
@@ -67,15 +67,11 @@ eleventyNavigation:
           
           <!--Left Circle Image-->
           <picture class="cs-left-image">
-              <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaning2-m.jpg">
-              <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaning2.jpg">
-              <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaning2.jpg" alt="cleaning" width="211" height="211" aria-hidden="true">
+            {% image './src/images/clean-machine.jpg', 'tiled', 'cs-picture', 'eager', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
           </picture>
           <!--Bottom Circle Image-->
           <picture class="cs-bottom-image">
-              <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaning4.jpg">
-              <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaning4.jpg">
-              <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaning4.jpg" alt="cleaning" width="180" height="180" aria-hidden="true">
+            {% image './src/images/mop-main.jpg', 'tiled', 'cs-picture', 'eager', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
           </picture>
           <picture class="cs-person">
             {% image './src/images/van.png', 'DSF cleaning van', 'cs-picture', 'eager', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
@@ -85,73 +81,10 @@ eleventyNavigation:
 </section>     
 
 <!-- ============================================ -->
-<!--             Side By Side Reverse             -->
-<!-- ============================================ -->
-
-<section id="sbsr-1363">
-  <div class="cs-container">
-      <div class="cs-image-group">
-          <picture class="cs-background">
-              <img src="assets/svgs/blob.svg" alt="">
-          </picture>
-          <div class="cs-box">
-            {% image './src/images/van.png', 'DSF cleaning van', 'cs-picture', 'eager', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
-          </div>
-      </div>
-      <div class="cs-content">
-          <h2 class="cs-title">We're a Different Kind of Service Company</h2>
-          <p class="cs-text">
-              On the other hand, we denounce with righteous indignation dislike men who areso beguiled and demoralized by the charms of pleasure moment blinded by desire that they cannot foresee
-          </p>
-          <ul class="cs-card-group">
-              <li class="cs-item">
-                  <h3 class="cs-h3">
-                      <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/trophy.svg" alt="icon" width="32" height="32">
-                      Quality Services
-                  </h3>
-                  <p class="cs-item-text">
-                      There are many variations of but the majority is simply free suffered.
-                  </p>
-              </li>
-              <li class="cs-item">
-                  <h3 class="cs-h3">
-                      <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/circle-check.svg" alt="icon" width="32" height="32">
-                      Quality Services
-                  </h3>
-                  <p class="cs-item-text">
-                      There are many variations of but the majority is simply free suffered.
-                  </p>
-              </li>
-          </ul>
-          <ul class="cs-ul">
-              <li class="cs-li">
-                  <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/black-check.svg" alt="checkmark" width="24" height="24">
-                  Digital Solutions Provider Agency
-              </li>
-              <li class="cs-li">
-                  <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/black-check.svg" alt="checkmark" width="24" height="24">
-                  Unicode, UTF8 & Character Sets The Ultimate Guide
-              </li>
-              <li class="cs-li">
-                  <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/black-check.svg" alt="checkmark" width="24" height="24">
-                  WordPress Guides For The Advanced Beginner
-              </li>
-              <li class="cs-li">
-                  <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/black-check.svg" alt="checkmark" width="24" height="24">
-                  Digital Clean Checklist Prepared New Year
-              </li>
-          </ul>
-          <a href="" class="cs-button-solid">Discover More</a>
-      </div>
-  </div>
-  <div class="cs-bubbles" aria-hidden="true"></div>
-</section>
-                              
-<!-- ============================================ -->
 <!--                   Services                   -->
 <!-- ============================================ -->
 
-<section id="pricing-603">
+<section id="services-index">
   <div class="cs-container">
       <div class="cs-content">
         <h2 class="cs-title">Our Services</h2>

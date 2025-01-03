@@ -4,7 +4,7 @@ description: 'Meta description for the page'
 metaTitle: 'Title that shows up on OG social Media Title Tag'
 tagTitle: 'Services'
 preloadImg: '/images/tiles.jpg'
-preloadCSS: '/css/reviews.css'
+preloadCSS: '/css/services.css'
 permalink: 'services/'
 eleventyNavigation:
     key: Services
@@ -22,17 +22,16 @@ eleventyNavigation:
 </section>
 
 
-
 <!-- ============================================ -->
 <!--                 Side By Side                 -->
 <!-- ============================================ -->
 
-<section id="sbsr-333">
+<section id="services-m">
   <div class="cs-container">
       <!-- Left Image Section -->
       <div class="cs-image-group">
           <picture class="cs-picture">
-            {% image './src/images/room.jpg', 'empty conference room', '', 'lazy', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
+            {% image './src/images/room.jpg', 'clean conference room', '', 'lazy', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
           </picture>
           <div class="cs-box">
               <span class="cs-number">25+</span>
@@ -43,41 +42,26 @@ eleventyNavigation:
       <div class="cs-content">
           <h2 class="cs-title">Commercial Cleaning</h2>
           <p class="cs-text">
-            Keep your business spotless with our reliable commercial cleaning services, specializing in office and industrial cleaning, janitorial services, and customized cleaning solutions. Some of our
-            cleaning services include:
+            Keep your business spotless with our reliable commercial cleaning services. We specialize in cleaning any commercial building and industrial plants. Some of our cleaning services include:
           </p>
           <ul class="cs-ul">
-              <li class="cs-li">Indoor Environmental Tile Scrubbing and High-Speed Burnishing</li>
+              <li class="cs-li">Indoor Environmental Tile Scrub and High-Speed Burnishing</li>
               <li class="cs-li">Carpet Extraction</li>
               <li class="cs-li">Ceiling Cleaning</li>
               <li class="cs-li">Strip and Wax</li>
           </ul>
-          <a class="cs-button-solid" aria-label="learn more about our programs" href="">Learn More</a>
-      </div>
-  </div>
-</section>
-
-<!-- ============================================ -->
-<!--                Side By Side                  -->
-<!-- ============================================ -->
-
-<section id="RTsbs-1594">
-  <div class="cs-container">
-      <div class="cs-image-group">
-          <!--Top left image-->
-          <picture class="cs-picture cs-picture1">
-            {% image './src/images/vent.jpg', 'ac vent', '', 'lazy', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
-          </picture>
-      </div>
-      <div class="cs-content">
           <h2 class="cs-title">HVAC</h2>
-          <p class="cs-text">
-              Dive into the exhilarating world of fishing with Gill Rush, a dynamic and electrifying apparel brand designed exclusively for those who live for the rush of the catch. For avid anglers who feel the pulse quicken at the mere tug on their line, Gill Rush captures the essence of that heart-pounding moment when fish and fisherman lock in a fierce dance of skill and strategy.
-          </p>
-          <a href="" class="cs-button-solid">View All Collections</a>
+          <p class="cs-text">Stay comfortable all year with our comprehensive HVAC cleaning services. We'll remove any dirt, dust, and debris from your HVAC systems.</p>
+          <h2 class="cs-title">Preventative Maintenance</h2>
+          <p class="cs-text">Protect your investment and reduce downtime with our preventative maintenance services. We'll worry about keeping your workplace clean while you worry about taking care of business.</p>
+          <a class="cs-button-solid" aria-label="contact us" href="">Contact Us</a>
       </div>
   </div>
 </section>
+                              
+                              
+                              
+                              
               
                               
 <!-- ============================================ -->
@@ -86,12 +70,14 @@ eleventyNavigation:
 
 <section id="cta">
   <div class="container">
-    <h2 class="title">Get It Done <br> With Us Today</h2>
+    <h2 class="title">
+      Discover the Service You Deserve
+    </h2>
     <p>
-            Say something catchy, informative, and encouraging to click the button to go to the contact page.  I like to add these to the bottom of all pages.
-        </p>
-    <a href="/contact.html" class="button-solid">Free Estimate</a>
+      Our team is dedicated to delivering exceptional results you can see and trust. From routine cleaning to customized solutions, 
+      we’ve got you covered. Don’t wait—take the first step toward a cleaner, fresher workspace today!
+    </p>
+    <a href="/contact" class="button-solid">Get an Estimate Now</a>
   </div>
-  {% image './src/images/mop-main.jpg', 'kitchen cabinets', '', 'lazy', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
-
+  {% image './src/images/mop-cta.jpg', 'mop on a tile floor', '', 'lazy', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
 </section>

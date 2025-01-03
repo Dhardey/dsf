@@ -4,7 +4,10 @@
 /* Mobile */
 @media only screen and (min-width: 0em) {
   :root {
-    --primary: #0A58CA;
+    --primary: #1268F9;
+    --primLight: #e7f0fe;
+    --primGradient: 
+    --secondary: #dcbe9f;
     --primaryShade: #ffd675;
     --accent: red;
     --primaryLight: #0A58CA;
@@ -12,7 +15,6 @@
     --bodyTextColor: #4E4B66;
     --bodyTextColorWhite: #FAFBFC;
     --headerColor: #1a1a1a;
-    --secondary: grey;
      /* --bg-light: #fefefe;
     --bg-grey: #e8e8e8;
     /* 13px - 16px */
@@ -57,7 +59,6 @@
     font-family: 'Roboto', Arial, sans-serif;
     color: var(--bg-light);
     overflow-x: hidden;
-    background-color: var(--bg-light);
   }
   *,
   *:before,
@@ -611,6 +612,7 @@
     padding-block-end: 6.25rem;
     background-attachment: fixed;
     font-size: inherit;
+    max-height: 20em;
   }
 }
 /*-- -------------------------- -->
