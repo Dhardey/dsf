@@ -54,36 +54,6 @@
     #cs-contact-490 .cs-link:last-of-type {
       margin-bottom: 0;
     }
-    #cs-contact-490 .cs-social {
-      /* 32px - 80px */
-      margin-top: clamp(2rem, 6vw, 5rem);
-      display: inline-flex;
-      justify-content: flex-start;
-      gap: 0.75em;
-    }
-    #cs-contact-490 .cs-social-link {
-      /* 32px - 52px */
-      width: clamp(2rem, 4vw, 3.25rem);
-      height: clamp(2rem, 4vw, 3.25rem);
-      background-color: #4e4b66;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      z-index: 1;
-      transition: transform 0.3s, background-color 0.3s;
-    }
-    #cs-contact-490 .cs-social-link:hover {
-      background-color: var(--primary);
-      transform: translateY(-0.1875rem);
-    }
-    #cs-contact-490 .cs-social-img {
-      /* 14px - 24px */
-      height: clamp(0.875rem, 2vw, 1.5rem);
-      width: auto;
-      display: block;
-    }
     #cs-contact-490 #cs-form-490 {
       width: 100%;
       max-width: 40.625rem;
