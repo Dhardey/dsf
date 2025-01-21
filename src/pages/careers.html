@@ -38,7 +38,7 @@ eleventyNavigation:
             </p>
         </div>
         <!-- Form -->
-        <form id="cs-form-490" name="Application Form" method="POST" netlify>
+        <form id="cs-form-490" name="Application Form" method="POST" enctype="multipart/form-data" netlify>
             <label class="cs-label">
                 Name
                 <input class="cs-input" required type="text" id="name-490" name="name" placeholder="Full Name">
@@ -57,7 +57,7 @@ eleventyNavigation:
             </label>
             <label class="file-upload">
                 Upload Your Resume
-                <input class="file-input" type="file">
+                <input name="file" class="file-input" type="file">
             </label>
             <button class="cs-button-solid" type="submit">Submit Message Now</button>
         </form>
