@@ -1,0 +1,66 @@
+---
+layout: 'base.html'
+description: 'Meta description for the page'
+metaTitle: 'Title that shows up on google searches'
+tagTitle: 'Careers'
+preloadImg: '/images/mop-main.jpg'
+preloadCSS: '/css/careers.css'
+permalink: 'careers/'
+eleventyNavigation:
+    key: Contact
+    order: 600
+---
+
+<!-- ============================================ -->
+<!--                    LANDING                   -->
+<!-- ============================================ -->
+
+<section id="int-hero">
+    <h1 id="home-h">Careers</h1>
+    {% image './src/images/tiles.jpg', 'tiled floor', '', 'lazy', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
+  </section>
+
+<!-- ============================================ -->
+<!--                Contact Form                  -->
+<!-- ============================================ -->
+
+<section id="cs-contact-490">
+    <div class="cs-container">
+        <!-- Contact Info -->
+        <div class="cs-content">
+            <h2 class="cs-title">Join Our Team</h2>
+            <p class="cs-text">
+                Looking for a career where your hard work makes a visible difference? At DSF Enterprises, we take pride in delivering top-notch commercial cleaning services 
+                while fostering a supportive and friendly work environment.<br>
+                We value dedication, attention to detail, and a positive attitude—and we reward our team members with competitive pay, flexible schedules, and opportunities 
+                for growth.<br>
+                Whether you’re an experienced cleaner or just starting out, we’d love to hear from you. Apply today and become part of a team that shines.
+            </p>
+        </div>
+        <!-- Form -->
+        <form id="cs-form-490" name="Application Form" method="post" data-netlify="true">
+            <label class="cs-label">
+                Name
+                <input class="cs-input" required type="text" id="name-490" name="name" placeholder="Full Name">
+            </label>
+            <label class="cs-label">
+                Email
+                <input class="cs-input" required type="text" id="email-490" name="email" placeholder="Email">
+            </label>
+            <label class="cs-label">
+                Phone
+                <input class="cs-input" required type="text" id="phone-490" name="phone" placeholder="+1 (123) 456-7890">
+            </label>
+            <label class="cs-label-message">
+                Tell Us About Yourself
+                <textarea class="cs-input" required name="Message" id="message-490" placeholder="Hello, I’m interested in..."></textarea>
+            </label>
+            <label class="file-upload">
+                Upload Your Resume
+                <input class="file-input" type="file">
+            </label>
+            <button class="cs-button-solid" type="submit">Submit Message Now</button>
+        </form>
+    </div>
+</section>
+                                

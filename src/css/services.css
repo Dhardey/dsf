@@ -28,6 +28,19 @@
       /* centers content horizontally, set to flex-start to left align */
       align-items: flex-start;
   }
+  #services-m .service-card
+  {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  #services-m .icon-l {
+    max-height: 70px;
+  }
+  #services-m .icon-d {
+    max-height: 70px;
+    display: none;
+  }
 
   #services-m .cs-text {
       margin-bottom: 1rem;
@@ -45,6 +58,7 @@
       flex-direction: column;
       align-items: flex-start;
       gap: 0.5rem;
+      margin-top: -1.5rem;
   }
   #services-m .cs-li {
       font-size: var(--bodyFontSize);
@@ -70,7 +84,7 @@
       top: 0.625rem;
       left: -0.9375rem;
   }
-  #services-m .cs-button-solid {
+  #services-m .cs-button-solid, #proposal .cs-button-solid {
       font-size: 1rem;
       /* 46px - 56px */
       line-height: clamp(2.875rem, 5.5vw, 3.5rem);
@@ -265,8 +279,25 @@
   }
 }
 
-                              
-
+/*-- -------------------------- -->
+<---           Prop             -->
+<--- -------------------------- -*/                              
+@media only screen and (min-width: 0em) {
+  #proposal .prop-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--primary);
+    border-radius: 2rem;
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: var(--primary);
+    padding-top: 1rem;
+  }
+  #proposal h2, p{
+    color: white;
+  }
+}
                                                                
                                                                                                         
 /*-- -------------------------- -->
@@ -384,6 +415,14 @@
 /* Dark Mode */
 @media only screen and (min-width: 0em) {
   body.dark-mode #cta:after {
+    background-color: var(--dark);
+    background-image: radial-gradient(rgba(255, 255, 255, 0.171) 2px, transparent 0);
+  }
+  body.dark-mode .icon-d {
+    display: block !important;
+  }
+  body.dark-mode .icon-l {
     display: none;
   }
+
 }
