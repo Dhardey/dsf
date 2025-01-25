@@ -169,7 +169,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     z-index: 10000;
     height: auto;
   }
@@ -184,7 +184,7 @@
   }
   #navigation .container {
     padding: 0.8125rem 0;
-    width: 96%;
+    width: 96% !important;
   }
   #navigation .logo {
     display: inline-block;
@@ -327,10 +327,10 @@
     content: '';
     position: absolute;
     display: block;
-    height: 0.1rem;
+    height: 0.5rem;
     background: var(--primary);
     opacity: 1;
-    bottom: -.5rem;
+    bottom: -1rem;
     border-radius: 0.25rem;
     left: -0.375rem;
     right: -0.375rem;
