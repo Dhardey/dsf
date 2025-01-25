@@ -1,13 +1,52 @@
 /*-- -------------------------- -->
-<---          Contact           -->
+<---          Application       -->
 <--- -------------------------- -*/
+input:invalid:not(:focus):not(:placeholder-shown) {
+  border: none;
+  outline: 2px solid var(--errorLight);
+}
+/* file upload button */
+input[type="file"]::file-selector-button {
+  font-family: 'Roboto', serif !important;
+  font-weight: normal !important;
+  border-radius: .25rem;
+  padding: 0 16px;
+  height: 40px;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid var(--primary);
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+  margin-right: 16px;
+  transition: width 1s;
+}
+input[type="file"]::file-selector-button:hover {
+  color: #fff;
+  background-color: var(--primary);
+}
+input[type="file"]::file-selector-button:hover:before {
+  width:100%;
+}
+body.dark-mode input[type="file"]::file-selector-button {
+  background-color: var(--dark);
+  color: var(--bodyTextColorWhite);
+  border: 1px solid transparent;
+  border-bottom: 1px solid var(--primary);
+  transition: .3s;
+}
+body.dark-mode input[type="file"]::file-selector-button:hover {
+  border: 1px solid var(--primary);
+}
+input:invalid:not(:focus):not(:placeholder-shown) {
+  border: none;
+  outline: 2px solid var(--dark-error);
+}
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #cs-contact-490 {
+    #cs-application {
       padding: var(--sectionPadding);
     }
-    #cs-contact-490 .cs-container {
+    #cs-application .cs-container {
       width: 100%;
       /* changes to 1280px at desktop */
       max-width: 34.375rem;
@@ -18,15 +57,20 @@
       align-items: flex-start;
       gap: 3rem;
     }
-    #cs-contact-490 .cs-content {
+    #cs-application .cs-content {
       max-width: 32.625rem;
       text-align: left;
     }
-    #cs-contact-490 .cs-text {
+    .cs-title {
+      font-size: 2rem;
+      padding-bottom: 1rem;
+    }
+    #cs-application .cs-text {
       /* 16px - 48px */
       margin: 0 0 clamp(1rem, 4.4vw, 3rem) 0;
+      margin-bottom: 1rem;
     }
-    #cs-contact-490 .cs-header {
+    #cs-application .cs-header {
       /* 13px - 16px */
       font-size: clamp(0.8125rem, 1.5vw, 1rem);
       line-height: 1.2em;
@@ -37,7 +81,7 @@
       color: #b4b2c7;
       display: block;
     }
-    #cs-contact-490 .cs-link {
+    #cs-application .cs-link {
       /* 16px - 20px */
       font-size: clamp(1rem, 2vw, 1.25rem);
       text-decoration: none;
@@ -48,13 +92,13 @@
       color: var(--headerColor);
       display: block;
     }
-    #cs-contact-490 .cs-link:hover {
+    #cs-application .cs-link:hover {
       text-decoration: underline;
     }
-    #cs-contact-490 .cs-link:last-of-type {
+    #cs-application .cs-link:last-of-type {
       margin-bottom: 0;
     }
-    #cs-contact-490 #cs-form-490 {
+    #cs-application #cs-form {
       width: 100%;
       max-width: 40.625rem;
       /* 32px - 40px */
@@ -66,7 +110,7 @@
       border: 1px solid #dad9e3;
       border-radius: 1rem;
     }
-    #cs-contact-490 .cs-label {
+    #cs-application .cs-label {
       /* 14px - 16px */
       font-size: clamp(0.875rem, 1.3vw, 1rem);
       line-height: 1.5em;
@@ -79,12 +123,12 @@
       align-items: flex-start;
       flex-direction: column;
     }
-    #cs-contact-490 .cs-label-message {
+    #cs-application .cs-label-message {
       /* 32px - 40px */
       margin-bottom: clamp(2rem, 4.5vw, 2.5rem);
     }
-    #cs-contact-490 .cs-input,
-    #cs-contact-490 textarea {
+    #cs-application .cs-input,
+    #cs-application textarea {
       font-size: 1rem;
       width: 100%;
       height: 4rem;
@@ -97,26 +141,26 @@
       box-sizing: border-box;
       transition: border 0.3s;
     }
-    #cs-contact-490 .cs-input:hover,
-    #cs-contact-490 textarea:hover {
+    #cs-application .cs-input:hover,
+    #cs-application textarea:hover {
       border: 1px solid var(--primary);
     }
-    #cs-contact-490 .cs-input::placeholder,
-    #cs-contact-490 textarea::placeholder {
+    #cs-application .cs-input::placeholder,
+    #cs-application textarea::placeholder {
       color: #7d799c;
     }
-    #cs-contact-490 textarea {
+    #cs-application textarea {
       font-family: inherit;
       margin: 0;
       padding-top: 1.25rem;
       min-height: 7.5rem;
     }
-    #cs-contact-490 .cs-button-solid {
+    #cs-application .cs-button-solid {
       font-size: 1rem;
       /* 46px - 56px */
       line-height: clamp(2.875em, 5.5vw, 3.5em);
       text-decoration: none;
-      font-weight: 700;
+      font-weight: 400;
       text-align: center;
       margin: auto;
       width: 100%;
@@ -131,7 +175,7 @@
       /* prevents padding from adding to the width */
       box-sizing: border-box;
     }
-    #cs-contact-490 .cs-button-solid:before {
+    #cs-application .cs-button-solid:before {
       content: "";
       position: absolute;
       height: 100%;
@@ -144,53 +188,64 @@
       border-radius: 0.5rem;
       transition: width 0.3s;
     }
-    #cs-contact-490 .cs-button-solid:hover {
+    #cs-application .cs-button-solid:hover {
       cursor: pointer;
     }
-    #cs-contact-490 .cs-button-solid:hover:before {
+    #cs-application .cs-button-solid:hover:before {
       width: 100%;
     }
   }
   /* Tablet - 700px */
   @media only screen and (min-width: 43.75rem) {
-    #cs-contact-490 .cs-container {
+    #cs-application .cs-container {
       max-width: 80rem;
       flex-direction: row;
       justify-content: space-between;
     }
-    #cs-contact-490 .cs-content {
+    #cs-application .cs-content {
       width: 40%;
       /* pushes it to the right */
       order: 2;
       flex: none;
     }
-    #cs-contact-490 #cs-form-490 {
+    #cs-application #cs-form {
       margin: 0;
     }
   }
   /* Dark Mode */
   @media only screen and (min-width: 43.75rem) {
-    body.dark-mode #cs-contact-490 .cs-title,
-    body.dark-mode #cs-contact-490 .cs-text,
-    body.dark-mode #cs-contact-490 .cs-link,
-    body.dark-mode #cs-contact-490 .cs-header,
-    body.dark-mode #cs-contact-490 .cs-label {
+    body.dark-mode #cs-application .cs-title,
+    body.dark-mode #cs-application .cs-text,
+    body.dark-mode #cs-application .cs-link,
+    body.dark-mode #cs-application .cs-header,
+    body.dark-mode #cs-application .cs-label {
       color: var(--bodyTextColorWhite);
     }
-    body.dark-mode #cs-contact-490 .cs-text,
-    body.dark-mode #cs-contact-490 .cs-link {
+    body.dark-mode #cs-application .cs-text,
+    body.dark-mode #cs-application .cs-link {
       opacity: .8;
     }
-    body.dark-mode #cs-contact-490 #cs-form-490 {
+    body.dark-mode #cs-application #cs-form {
       border-color: rgba(255, 255, 255, 0.3);
     }
-    body.dark-mode #cs-contact-490 .cs-input {
+    body.dark-mode #cs-application .cs-input {
       color: var(--bodyTextColorWhite);
       background-color: transparent;
     }
-    body.dark-mode #cs-contact-490 .cs-input::placeholder {
+    body.dark-mode #cs-application .cs-input::placeholder {
       color: var(--bodyTextColorWhite);
-      opacity: .5;
+      opacity: .9;
     }
+    body.dark-mode #cs-application .cs-button-solid {
+      background-color: transparent !important;
+      border: 1px solid var(--primary);
   }
+  body.dark-mode #cs-application .cs-button-solid:before {
+      width: 0;
+  }
+  body.dark-mode #cs-application .cs-button-solid:hover {
+      box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
+      0 0 60px #008cff;
+  }
+}
                                   

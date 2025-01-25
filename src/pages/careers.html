@@ -21,45 +21,48 @@ eleventyNavigation:
   </section>
 
 <!-- ============================================ -->
-<!--                Contact Form                  -->
+<!--                Application Form              -->
 <!-- ============================================ -->
-
-<section id="cs-contact-490">
+<section id="cs-application">
     <div class="cs-container">
-        <!-- Contact Info -->
+        <!-- Application Info -->
         <div class="cs-content">
             <h2 class="cs-title">Join Our Team</h2>
             <p class="cs-text">
                 Looking for a career where your hard work makes a visible difference? At DSF Enterprises, we take pride in delivering top-notch commercial cleaning services 
-                while fostering a supportive and friendly work environment.<br>
+                while fostering a supportive and friendly work environment.
+            </p>
+            <p class="cs-text">
                 We value dedication, attention to detail, and a positive attitude—and we reward our team members with competitive pay, flexible schedules, and opportunities 
-                for growth.<br>
-                Whether you’re an experienced cleaner or just starting out, we’d love to hear from you. Apply today and become part of a team that shines.
+                for growth.
+            </p>
+            <p class="cs-text">
+                Whether you’re an experienced cleaner or just starting out, we’d love to hear from you. Apply today and become part of a team that shines!
             </p>
         </div>
         <!-- Form -->
-        <form id="cs-form-490" name="Application Form" method="POST" enctype="multipart/form-data" netlify>
+        <form id="cs-form" name="Application Form" method="POST" enctype="multipart/form-data" netlify>
             <label class="cs-label">
                 Name
-                <input class="cs-input" required type="text" id="name-490" name="name" placeholder="Full Name">
+                <input class="cs-input" required type="text" id="name" name="name" placeholder="Your Name" pattern="[a-zA-Z]">
             </label>
             <label class="cs-label">
                 Email
-                <input class="cs-input" required type="text" id="email-490" name="email" placeholder="Email">
+                <input class="cs-input" required type="email" id="email" name="email" placeholder="youremail@email.com">
             </label>
             <label class="cs-label">
                 Phone
-                <input class="cs-input" required type="text" id="phone-490" name="phone" placeholder="+1 (123) 456-7890">
+                <input class="cs-input" required type="text" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" maxlength="10">
             </label>
-            <label class="cs-label-message">
+            <label class="cs-label">
                 Tell Us About Yourself
-                <textarea class="cs-input" required name="Message" id="message-490" placeholder="Hello, I’m interested in..."></textarea>
+                <textarea class="cs-input" required name="Message" id="message" placeholder="Hello..."></textarea>
             </label>
-            <label class="file-upload">
+            <label class="cs-label" name="resume file" id="resume">
                 Upload Your Resume
                 <input name="file" class="file-input" type="file">
             </label>
-            <button class="cs-button-solid" type="submit">Submit Message Now</button>
+            <button class="cs-button-solid" type="submit">Send Application</button>
         </form>
     </div>
 </section>

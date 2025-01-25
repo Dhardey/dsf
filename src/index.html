@@ -1,6 +1,6 @@
 ---
 layout: 'base.html'
-description: 'Meta description for the page'
+description: 'DSF Enterprises Home Page'
 metaTitle: 'DSF Enterprises'
 tagTitle: 'DSF Enterprises'
 preloadImg: '/images/tiles.jpg'
@@ -15,7 +15,6 @@ eleventyNavigation:
 <!-- ============================================ -->
 <!--                    Hero                      -->
 <!-- ============================================ -->
-<meta name="google-site-verification" content="feGOhs6i7_QFNkfmxVXFWedf_fYiwlyQkDkxE7scALY" />
 <section id="hero">
   <div class="cs-container">
     <div class="cs-flex-group">
@@ -34,51 +33,64 @@ eleventyNavigation:
 <!--             About                            -->
 <!-- ============================================ -->
 
-<section id="about-index">
+<section id="sbs">
   <div class="cs-container">
-      <div class="cs-content">
-          <h2 class="cs-title">We're a Different Kind of Service Company</h2>
-          <p class="cs-text">
-            Headquarted in Aiken, SC, we've served the CSRA as a trusted, family-owned commercial cleaning and maintenance business since 1999. Under the leadership of John Wallace and his daughter Danita, 
-            we take pride in providing dependable, personalized cleaning solutions for workplaces in our community. 
-          </p>
-          <ul class="cs-stat-group">
-            <li class="cs-stat" id="stat-mid">
-                <span class="cs-number">25+</span>
-                <span class="cs-desc">Years of Experience</span>
-            </li>
-            <li class="cs-stat">
-              <span class="cs-number">100+</span>
-              <span class="cs-desc">Happy Clients</span>
-            </li>
-        </ul>
-          <a href="" class="cs-button-solid">Learn More</a>
+    <!-- Left Image Section -->
+    <div class="cs-left">
+      <div class="border">
       </div>
-      <!--Left Image Group-->
-      <div class="cs-image-group">
-          <!--Faded Paint Splash-->
-          <img class="cs-splash" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/blue-splash.svg" aria-hidden="true" loading="lazy" decoding="async" alt="splash icon" width="570" height="586">
-
-          <!--Blue Blob-->
-          <img class="cs-blob" src="assets/svgs/blob.svg" aria-hidden="true" loading="lazy" decoding="async" alt="blob icon">
-
-          <!--Lightning Bolt-->
-          <img class="cs-lightning" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/lightning.svg" aria-hidden="true" loading="lazy" decoding="async" alt="lightning icon" width="392" height="497">
-          
-          <!--Left Circle Image-->
-          <picture class="cs-left-image">
-            {% image './src/images/clean-machine.jpg', 'tiled', 'cs-picture', 'eager', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
-          </picture>
-          <!--Bottom Circle Image-->
-          <picture class="cs-bottom-image">
-            {% image './src/images/mop-main.jpg', 'tiled', 'cs-picture', 'eager', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
-          </picture>
-          <picture class="cs-person">
-            {% image './src/images/van.png', 'DSF cleaning van', 'cs-picture', 'eager', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
-          </picture>
-      </div>
+      {% image './src/images/dsf-van.jpg', 'house', 'cs-picture cs-picture2', 'lazy'%}
+    </div>
+    <!-- Right Content Section-->
+    <div class="cs-right">
+      <span class="cs-topper">About Us</span>
+      <h2 class="cs-title">We're a Different Kind of Service Company</h2>
+      <p class="cs-text">
+        Headquarted in Aiken, SC, we've served the CSRA as a trusted, family-owned commercial cleaning and maintenance business since 1999. Under the leadership 
+        of John Wallace and his daughter Danita, we take pride in providing dependable, personalized cleaning solutions for workplaces in our community. 
+      </p>
+      <a href="/about" class="button-solid">Learn More</a>
+    </div>
   </div>
-</section>     
+  <div class="cs-bubbles" aria-hidden="true"></div>
+</section>
+
+<!-- ============================================ -->
+<!--                   Stats                      -->
+<!-- ============================================ -->
+
+<!-- No headers, so no section tag -->
+<div id="stats">
+  <ul class="cs-card-group">
+      <li class="cs-item">
+          <picture class="cs-picture">
+              <img class="cs-icon" src="assets/images/exp-w-i.png" alt="medal icon" width="35" height="40" loading="lazy" decoding="async" aria-hidden="true">
+          </picture>
+          <div class="cs-flex-group">
+              <span class="cs-number">25+</span>
+              <span class="cs-desc">Years of Experience</span>
+          </div>
+      </li>
+      <li class="cs-item">
+          <picture class="cs-picture">
+              <img class="cs-icon" src="assets/images/store-i.png" alt="store icon" width="40" height="35" loading="lazy" decoding="async" aria-hidden="true">
+          </picture>
+          <div class="cs-flex-group">
+              <span class="cs-number">100+</span>
+              <span class="cs-desc">Businesses Served</span>
+          </div>
+      </li>
+      <li class="cs-item">
+          <picture class="cs-picture">
+              <img class="cs-icon" src="assets/images/thumbsup-w-i.png" alt="icon" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true">
+          </picture>
+          <div class="cs-flex-group">
+              <span class="cs-number">100+</span>
+              <span class="cs-desc">Happy Customers</span>
+          </div>
+      </li>
+  </ul>
+</div>
 
 <!-- ============================================ -->
 <!--                   Services                   -->
@@ -117,6 +129,9 @@ eleventyNavigation:
               <span class="cs-included">Protect your investment and reduce downtime with our preventative maintenance services, ensuring your workplace operates efficiently and reliably.</span>
           </li>
       </ul>
+      <div class="button-group">
+        <a href="/services" class="button-solid">View More</a>
+      </div>
   </div>
 </section>
                               

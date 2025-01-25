@@ -253,15 +253,16 @@
     opacity: .8;
   }
 }
-                              
+
 /*-- -------------------------- -->
-<---          Pricing           -->
+<---          Services          -->
 <--- -------------------------- -*/
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #services-index {
     padding: var(--sectionPadding);
+    padding-bottom: var(--sectionPadding);
   }
   #services-index .cs-container {
     width: 100%;
@@ -282,6 +283,30 @@
     flex-direction: column;
     /* centers content horizontally, set to flex-start to left align */
     align-items: center;
+  }
+  #services-index .cs-topper {
+    /* 13px - 16px */
+    font-size: clamp(0.8125rem, 1.6vw, 1rem);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: .1em;
+    font-weight: 700;
+    color: var(--primary);
+    display: block;
+  }
+  #services-index .cs-title {
+    /* 39px - 61px */
+    font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: center;
+    width: 100%;
+    /* 32px - 40px */
+    margin: 0 auto clamp(2rem, 4vw, 2.5rem) 0;
+    color: var(--headerColor);
+    position: relative;
+    margin-bottom: 1rem;
   }
   #services-index .cs-toggle-group {
     width: auto;
@@ -460,11 +485,12 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
-    border: 2px solid transparent;
+    transition: 0.5s ease-in-out;
+    border: 2px solid #c3c6ce;
   }
   #services-index .cs-item:hover {
-    border: 2px solid var(--primary);
+    border-color: var(--primary);
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
   }
   #services-index .cs-price-box {
     height: 6rem;
@@ -565,6 +591,9 @@
     margin-top: 0.1875rem;
     display: block;
   }
+  #services-index .button-group {
+    padding-bottom: .3rem;
+  }
   #services-index .cs-button-solid {
     font-size: 1rem;
     /* 46px - 56px */
@@ -657,6 +686,10 @@
   body.dark-mode #services-index .cs-icon {
     /* makes icon white (if it wasnt black to start) */
     filter: grayscale(1) brightness(1000%);
+  }
+  body.dark-mode #services-index .cs-item:hover {
+    box-shadow: 0 0 5px #008cff, 0 0 10px #008cff, 0 0 17px #008cff,
+    0 0 25px #008cff;
   }
 }
                                 

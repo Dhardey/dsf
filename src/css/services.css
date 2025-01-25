@@ -7,6 +7,27 @@
   #services-m {
       padding: var(--sectionPadding);
   }
+  #services-m .intro-text {
+    max-width: 80rem;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    font-size: 1.5rem;
+    margin-top: -4rem;
+    margin-bottom: 2.3rem;
+  }
+  #services-m .services-title {
+    color: var(--primary);
+    text-align: left;
+    font-size: 1.8rem;
+    white-space: nowrap;
+    padding-bottom: .2rem;
+  }
+  #services-m .services-intro {
+    color: var(--bodyTextColor);
+    text-align: left;
+    padding-bottom: .7rem;
+  }
   #services-m .cs-container {
       width: 100%;
       /* changes to 1280px at desktop */
@@ -44,6 +65,7 @@
 
   #services-m .cs-text {
       margin-bottom: 1rem;
+      color: var(--bodyTextColor);
   }
   #services-m .cs-text:last-of-type {
       margin-bottom: 2rem;
@@ -51,14 +73,13 @@
   #services-m .cs-ul {
       width: 100%;
       margin: 0 0 2rem 0;
-      padding-left: 1.25rem;
       /* prevents padding and border from affecting height and width */
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       gap: 0.5rem;
-      margin-top: -1.5rem;
+      margin-top: -1rem;
   }
   #services-m .cs-li {
       font-size: var(--bodyFontSize);
@@ -70,6 +91,7 @@
       margin: 0;
       color: var(--bodyTextColor);
       position: relative;
+      margin-left: 1rem;
   }
   #services-m .cs-li:before {
       /* bullet */
@@ -84,7 +106,7 @@
       top: 0.625rem;
       left: -0.9375rem;
   }
-  #services-m .cs-button-solid, #proposal .cs-button-solid {
+  #services-m .cs-button-solid {
       font-size: 1rem;
       /* 46px - 56px */
       line-height: clamp(2.875rem, 5.5vw, 3.5rem);
@@ -153,8 +175,8 @@
   #services-m .cs-image-group:before {
       /* blue circle */
       content: "";
-      width: 7.5em;
-      height: 7.5em;
+      width: 4.5em;
+      height: 4.5em;
       border-radius: 50%;
       background: var(--secondary);
       opacity: 1;
@@ -264,7 +286,7 @@
   }
 }
 /* Dark Mode */
-@media only screen and (min-width: 0rem) {
+@media only screen and (min-width: 0em) {
   body.dark-mode #services-m .cs-topper {
       color: var(--primaryLight);
   }
@@ -277,29 +299,30 @@
   body.dark-mode #services-m .cs-box {
       border-color: var(--accent);
   }
-}
-
-/*-- -------------------------- -->
-<---           Prop             -->
-<--- -------------------------- -*/                              
-@media only screen and (min-width: 0em) {
-  #proposal .prop-text{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  body.dark-mode #services-m .cs-image-group:before,
+  body.dark-mode #services-m .cs-image-group:after,
+  body.dark-mode #services-m .cs-box {
+    background: var(--dark-blue);
+  }
+  body.dark-mode #services-m .services-title {
+    color: var(--dark-primary-light);
+  }
+  body.dark-mode #services-m .services-intro{
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #services-m .cs-button-solid {
+    background-color: var(--dark) !important;
     border: 1px solid var(--primary);
-    border-radius: 2rem;
-    margin-left: 20%;
-    margin-right: 20%;
-    background-color: var(--primary);
-    padding-top: 1rem;
   }
-  #proposal h2, p{
-    color: white;
+  body.dark-mode #services-m .cs-button-solid:before{
+    background-color: var(--dark);
+  }
+  body.dark-mode #services-m .cs-button-solid:hover{
+    box-shadow: 0 0 5px #008cff, 0 0 10px #008cff, 0 0 17px #008cff,
+    0 0 25px #008cff;
   }
 }
-                                                               
-                                                                                                        
+                                                                                                                                                                       
 /*-- -------------------------- -->
 <---    Final Call To Action    -->
 <--- -------------------------- -*/
@@ -320,6 +343,8 @@
     top: 0;
     left: 0;
     z-index: -1;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
   }
   #cta .container {
     text-align: center;
@@ -339,6 +364,8 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
   }
   #cta .title {
     font-weight: 900;
@@ -373,6 +400,8 @@
   }
   #cta:before {
     display: none;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
   }
   #cta:after {
     content: '';
@@ -410,6 +439,8 @@
     top: 0;
     left: 0;
     z-index: 1;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
   }
 }
 /* Dark Mode */

@@ -4,9 +4,15 @@
 /* Mobile */
 @media only screen and (min-width: 0em) {
   :root {
-    --dark: #0e1015;
+    --dark: #121212;
     --medium: #2C394B;
     --accent: #334756;
+    --dark-primary: #008cff;
+    --dark-primary-light: #8eb7fc;
+    --dark-bg-accent: #282828;
+    --dark-border: #5d5d66;
+    --dark-blue: #121f35;
+    --dark-error: #CF6679;
   }
   body.dark-mode {
     background-color: var(--dark);
@@ -29,6 +35,18 @@
   }
   .dark {
     display: none;
+  }
+  body.dark-mode .button-solid {
+    border: 1px solid var(--primary);
+    background-color: var(--dark);
+  }
+  body.dark-mode .button-solid:before {
+    width: 0%;
+  }
+
+  body.dark-mode .button-solid:hover {
+    box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
+    0 0 60px #008cff;
   }
 }
 /*-- -------------------------- -->

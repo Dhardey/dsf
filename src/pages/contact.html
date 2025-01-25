@@ -26,44 +26,75 @@ eleventyNavigation:
 <!--                Contact Form                  -->
 <!-- ============================================ -->
 
-<section id="cs-contact-242">
-  <div class="cs-container">
-      <div class="cs-content">
-          <span class="cs-topper">We're Here To Help</span>
-          <h2 class="cs-title">Contact Us</h2>
-      </div>
-      <!-- Contact Info -->
-      <div class="cs-right-section">
-          <ul class="cs-ul">
-              <li class="cs-li">
-                  <picture class="cs-icon-wrapper">
-                      <img aria-hidden="true" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/mail.svg" alt="mail icon" class="cs-icon" width="36" height="36" decoding="async">
-                  </picture>
-                  <div class="cs-flex-group">
-                      <span class="cs-header">Email</span>
-                      <a href="mailto:enterprises1923@gmail.com" class="cs-link">enterprises1923@gmail.com</a>
-                  </div>
-              </li>
-              <li class="cs-li">
-                  <picture class="cs-icon-wrapper">
-                      <img aria-hidden="true" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/phone.svg" alt="phone icon" class="cs-icon" width="36" height="36" decoding="async">
-                  </picture>
-                  <div class="cs-flex-group">
-                      <span class="cs-header">Phone</span>
-                      <a href="tel:803-979-0756" class="cs-link">(803) 979-0756</a>
-                  </div>
-              </li>
-              <li class="cs-li">
-                <picture class="cs-icon-wrapper">
-                    <img aria-hidden="true" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/pin.svg" alt="address icon" class="cs-icon" width="36" height="36" decoding="async">
+<section id="cs-contact">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">We're Here To Help</span>
+            <h2 class="cs-title">Contact Us</h2>
+            <p class="cs-text">
+                Have questions about our services or need a personalized cleaning plan? Reach out to us today! Whether it’s a quick inquiry or a detailed request, 
+                our team is ready to assist you. We’re just a message or call away—let’s get your space sparkling clean!
+            </p>
+        </div>
+        <!-- Form -->
+        <form id="cs-form" name="Contact Form" method="POST" enctype="multipart/form-data" netlify>
+            <label class="cs-label">
+                Name
+                <input class="cs-input" required type="text" id="name" name="name" placeholder="Your Name" pattern="[a-zA-Z]*">
+            </label>
+            <label class="cs-label">
+                Email
+                <input class="cs-input" required type="email" id="email" name="email" placeholder="youremail@email.com">
+            </label>
+            <label class="cs-label">
+                Phone
+                <input class="cs-input" required type="text" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" maxlength="10">
+            </label>
+            <label class="cs-label cs-label-message">
+                Message
+                <textarea class="cs-input cs-textarea" required name="Message" id="message" placeholder="Hello, I’m interested in..."></textarea>
+            </label>
+            <label class="cs-label cs-label-pdf">
+                Did you fill out our form on our services page? If so, you can upload it here for us to take a look at!
+                <input name="proposal pdf" class="file-input" type="file" accept=".doc, .docx, .pdf">
+            </label>
+            <button class="cs-button-solid cs-submit" type="submit">Submit Message Now</button>
+        </form>
+        <!-- Contact Info -->
+        <div class="cs-right-section">
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <picture class="cs-icon-wrapper">
+                        <img aria-hidden="true" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/mail.svg" alt="mail icon" class="cs-icon" width="36" height="36" decoding="async">
                     </picture>
-                  <div class="cs-flex-group">
-                      <span class="cs-header">Address</span>
-                      <a href="" class="cs-link"><span class="cs-block">1463 Williston Rd,</span> Aiken, SC 29803</a>
-                  </div>
-              </li>
-          </ul>
-      </div>
-  </div>
+                    <div class="cs-flex-group">
+                        <span class="cs-header">Email</span>
+                        <a href="mailto:enterprises1923@gmail.com" class="cs-link">enterprises1923@gmail.com</a>
+                    </div>
+                </li>
+                <li class="cs-li">
+                    <picture class="cs-icon-wrapper">
+                        <img aria-hidden="true" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/phone.svg" alt="phone icon" class="cs-icon" width="36" height="36" decoding="async">
+                    </picture>
+                    <div class="cs-flex-group">
+                        <span class="cs-header">Phone</span>
+                        <a href="tel:803-979-0756" class="cs-link">(803) 979-0756</a>
+                    </div>
+                </li>
+                <li class="cs-li">
+                    <picture class="cs-icon-wrapper">
+                        <img aria-hidden="true" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/pin.svg" alt="address icon" class="cs-icon" width="36" height="36" decoding="async">
+                    </picture>
+                    <div class="cs-flex-group">
+                        <span class="cs-header">Address</span>
+                        <a href="" class="cs-link"><span class="cs-block">1163 Williston Rd</span>Aiken SC</a>
+                    </div>
+                </li>
+            </ul>
+            <!-- Picture -->
+            <picture class="cs-picture">
+                {% image './src/images/dsf-van.jpg', 'dsf van', 'cs-img', 'lazy'%}
+            </picture>
+        </div>
+    </div>
 </section>
-                              

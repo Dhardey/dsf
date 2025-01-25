@@ -78,7 +78,7 @@
     text-align: left;
     max-width: 50rem;
     margin: 0 auto 1rem;
-    color: var(--primary);
+    color: var(--headerColor);
     position: relative;
   }
   #sbs .cs-text {
@@ -163,7 +163,7 @@
     border: clamp(0.375em, 1.5vw, 0.75em) solid var(--dark);
   }
   body.dark-mode #sbs .cs-topper {
-    color: var(--primaryLight);
+    color: var(--dark-primary-light);
   }
   body.dark-mode #sbs .cs-title,
   body.dark-mode #sbs .cs-text,
@@ -183,6 +183,7 @@
     opacity: .2;
   }
 }
+
 /*-- -------------------------- -->
 <---    Final Call To Action    -->
 <--- -------------------------- -*/
@@ -203,6 +204,8 @@
     top: 0;
     left: 0;
     z-index: -1;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
   }
   #cta .container {
     text-align: center;
@@ -222,6 +225,8 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
   }
   #cta .title {
     font-weight: 900;
@@ -276,11 +281,15 @@
   #cta .container {
     width: 90.0625%;
     margin: auto;
+    border-radius: 50%;
   }
   #cta picture {
     width: 90.0625%;
     left: 50%;
     transform: translateX(-50%);
+  }
+  #cta .image {
+    border-radius: 50%;
   }
   #cta picture:before {
     content: '';
@@ -293,11 +302,17 @@
     top: 0;
     left: 0;
     z-index: 1;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
   }
 }
 /* Dark Mode */
 @media only screen and (min-width: 0em) {
   body.dark-mode #cta:after {
-    display: none;
+    background-color: var(--dark);
+    background-image: radial-gradient(rgba(255, 255, 255, 0.171) 2px, transparent 0);
+  }
+  body.dark-mode #cta .button-solid {
+    background-color: var(--dark);
   }
 }
