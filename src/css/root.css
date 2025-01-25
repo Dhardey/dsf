@@ -327,10 +327,10 @@
     content: '';
     position: absolute;
     display: block;
-    height: 0.5rem;
+    height: 0.1rem;
     background: var(--primary);
     opacity: 1;
-    bottom: 5rem;
+    bottom: -.5rem;
     border-radius: 0.25rem;
     left: -0.375rem;
     right: -0.375rem;
@@ -498,16 +498,16 @@
     display: none !important;
   }
   body.dark-mode #navigation #navbar-menu {
-    background-color: var(--medium);
+    background-color: var(--dark-blue);
   }
   body.dark-mode #navigation #navbar-menu ul li a {
     color: #fff;
   }
   body.dark-mode #navigation #navbar-menu ul li a:before {
-    background: var(--accent);
+    background: var(--dark-primary-light);
   }
   body.dark-mode #navigation #navbar-menu ul li a.active {
-    color: var(--primary);
+    color: var(--dark-primary-light);
   }
 }
 /* Dark Mode Desktop */
